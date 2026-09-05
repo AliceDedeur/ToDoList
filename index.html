@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="title">
+        <h1>ToDoList</h1>
+    </div>
+    <div id="form">
+        <div class="form_group">
+            <label for="input_name">Nom de la tâche</label>
+            <input id="input_name" type="text">
+        </div>
+        <div class="row"> 
+            <button id="btn_add">Ajouter</button> 
+            <div class="form_group">
+                <input id="input_important" type="checkbox">
+                <label for="input_important" id="important">Tâche <span>I</span>mportante</label>
+            </div>
+            <div class="column">
+                <div class="form_group">
+                    <label for="select_dev">Développeur</label>
+                    <select id="select_dev">
+                        <option>Aude</option>
+                        <option>Jérôme</option>
+                        <option>Khun</option>
+                        <option>Mike</option>
+                    </select>
+                </div>
+                <div class="form_group">
+                    <label for="input_date">Date de fin</label>
+                    <input id="input_date" type="date">
+                </div>
+            </div>    
+        </div>     
+    </div>
+    <div style="margin-top: 20px;">
+        <button class="btn_sort" id="btn_sort_asc">Trier par date (ASC)</button>
+        <button class="btn_sort" id="btn_sort_desc">Trier par date (DESC)</button>
+    </div>
+    <table id="table_taches">
+        <thead>
+            <tr>
+                <th>Tâche</th>
+                <th>Développeur</th>
+                <th>Date</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody id="liste_taches">
+
+        </tbody>
+    </table>
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Pompiere&family=Ranchers&display=swap');
+
+:root{
+    --first: #f9eddd;
+    --second: #072d40;
+    --accent_one: #e3ab4e;
+    --accent_two: #4e8b86;
+    --accent_third: #be3c46;  
+}
+
+*{
+    box-sizing: border-box;
+    font-family: "pompiere";
+    font-size: 20px;
+}
+
+body{
+    padding: 50px;
+    background-color: var(--first);
+    color: var(--second);
+}
+
+.title{
+    width: 100%;
+    padding: 50px 0 0 20px;
+    background-color: var(--accent_one);
+    border: 2px solid var(--second);
+    border-bottom-color: transparent;
+    h1{
+        font-family: "ranchers";
+        font-size: 130px;
+        margin: 0; 
+        color: var(--second);
+    }
+}
+
+#form{
+    background-color: var(--accent_two);
+    padding: 0 20px 50px 20px;
+    border: 2px solid var(--second);
+    border-top-color: transparent;
+    label{
+        font-size: 35px;
+        display: block;
+        margin: 0;
+    }
+
+    .row{
+        width: 100%;
+        display: flex;
+        flex-wrap:wrap-reverse;
+        gap: 20px;
+        margin-top: 50px;
+    }
+
+    .column{
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .form_group{
+        margin: 10px 0;
+        input, select{
+            width: 100%;
+            height: 40px;
+            padding: 10px;
+            background-color: var(--first);
+            border: none;
+            border-radius: 12px;
+        }
+    }
+
+    .row > .form_group{
+        label{
+            font-size: 15px;
+            text-transform: uppercase;
+            font-weight: bolder;
+            margin: 15px 0px 0px 47px;   
+        }
+    }
+
+    #input_important{
+        appearance: none;
+        -webkit-appearance: none;
+        width: 70px;
+        height: 70px;
+        padding: 0;
+        border-radius: 4px;
+        background-color: var(--first);
+        border: 5px solid var(--accent_one);
+        cursor: pointer;     
+        margin:  75px 50px 0px 50px;
+        transform:rotate(45deg);
+        transition: 1s ease all;
+        }
+        span{
+            font-size: 25px;
+            color:var(--accent_one);
+            transition: 1s ease all;
+    }
+
+    #important:hover span{
+        color:var(--accent_third);
+    }
+
+    #input_important:hover{
+        transform:rotate(180deg);
+    }
+
+    #input_important:checked{
+        background-color: var(--accent_third);
+    }
+
+    #btn_add{
+        width: 220px;
+        color: var(--accent_two);
+        border: 2px solid var(--accent_third);
+        background-color: var(--accent_one);
+        border-radius: 12px;
+        margin: 0px;
+        cursor: pointer;
+        box-shadow: 2px 2px 2px 0 var(--second);
+        transition: 1s ease all;
+        font-family: "ranchers";
+        font-size: 50px;
+        text-shadow: 2px 2px 2px var(--second);
+    }
+    #btn_add:hover{
+        transform: scale(1.07);
+    }
+}
+
+#table_taches{
+    margin-top: 20px;
+    width: 100%;
+    color: var(--first);
+    border-collapse: collapse;
+    box-shadow: 5px 5px 10px 0 #ccc;
+    tr.important {
+        background-color: var(--accent_third); 
+    }
+    tr{
+        background-color: var(--accent_one);
+    }
+    th {
+        background-color: var(--second);
+    }
+    th, td {
+        border: 1px solid var(--second);
+        text-align: left;
+        padding: 5px 10px;
+        height: 30px;
+    }
+
+    .btn_supprimer {
+        padding: 2px;
+        border-radius: 5px;
+        cursor: pointer;
+        box-shadow: 2px 2px 2px 0 var(--second);
+        transition: 1s ease all;
+    }
+    
+    .btn_supprimer:hover {
+        transform: scale(0.7);
+    }
+}
+
+.btn_sort{
+        background-color: var(--accent_two);
+        color: var(--first);
+        padding: 10px;
+        border-radius: 12px;
+    }
